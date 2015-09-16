@@ -67,3 +67,6 @@ footer.page-footer {
 h1.header{
     margin: 5px;
 }
+.shadow{
+    background-color: rgba(47, 47, 47, 0.25);
+}
