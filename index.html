@@ -13,8 +13,7 @@
   <link href='https://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">    
-  <link rel="stylesheet" type="text/css" href="dreamcodes/social_icons/tsc_social_icons.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -39,11 +38,10 @@
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
           <img class="yoga-logo" src="yogini-thosani-logo.png">
-        <h1 class="header center teal-text" style="font-family: Courgette, cursive">Yogini Toshani</h1>
+             <h1 style="text-align: center" class="teal-text">Yogini Toshani</h1>
         <div class="row center">
-            <h5 class="teal-text" style="font-family: Damion, cursive"><em>Holistic Healing</em></h5>
+            <h5 class="teal-text"><em>Holistic Healing</em></h5>
         </div>
         <div class="row center">
             <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1" style="font-family: Lemon, cursive">Join today</a>
@@ -59,7 +57,7 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center teal-text"><i class="material-icons">question_answer</i></h2>
+              <h2 class="center teal-text"><i class="material-icons">question_answer</i></h2>
             <h5 class="center"style="font-family: Courgette, cursive">About yogini Toshani</h5>
             <p class="teal-text"> Yogini Toshani is a personal South Florida yoga instructor/class. Yogini Toshani provides tranquility and stress relief for both mind and body. We provide a positive, soothing ambiance with good music and pleasant aromas.<em> lets Begin searching for the unforgiving treasure of inner peace.</em></p>
           </div>
@@ -81,6 +79,7 @@
       </div>
     </div>
   </div>
+   <!-- Icon section end -->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -94,41 +93,49 @@
     <div class="section container">
       <div class="row">
         <div class="col s12 center">
-          <h3><i class="material-icons teal-text" style="font-size: inherit">comment</i></h3>
-          <h4 style="font-family:Courgette, cursive">Yoga</h4>
+          <h3><i class="material-icons teal-text">comment</i></h3>
+          <h3>Yoga</h3>
           <p class="left-align teal-text"> What is Yoga? Yoga is a system of exercises for mental and physical health. Yoga is a hindu philosophy that teaches a person to experience inner peace by controlling the body and mind.</p>
-            <div class="section container">
                 <div class="row">
                     <h3><i class="material-icons teal-text" style="font-size: inherit">contact_phone</i></h3>
-                    <div style="font-family: Courgette, cursive"><h3>contact me</h3></div>
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name" class="teal-text">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name" class="teal-text">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-          <label for="available" class="teal-text">Available</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email" class="teal-text">Email</label>
-        </div>
-      </div>
-    </form>
-  </div>
-        </div>
+                    <h3>Contact me</h3>
+                    <form onsubmit="event.preventDefault();" class="col s12" action="http://www.swolebrain.com:4003/email" id="yooo" method="post">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="first_name" type="text" class="validate">
+                          <label for="first_name" class="teal-text">First Name</label>
+                            <input type="hidden" value="julian.albur@gmail.com" name="dest_email">
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="last_name" type="text" class="validate">
+                          <label for="last_name" class="teal-text">Last Name</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate">
+                          <label for="email" class="teal-text">Email</label>
+                        </div>
+                      </div>
+                        <div class="row">
+                             <div class="input-field col s12">
+                                <textarea id="textarea1" class="materialize-textarea" length="150"></textarea>
+                                <label for="textarea1" class="teal-text">Type message</label>
+                             </div>
+                        </div>
+                        <div class="row">
+                            <button id="submitbtn" class="btn waves-effect waves-light" onclick="submitForm();" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                            <div id="feedback" class="hidden">
+                                Your message is being sent
+                            </div>
+                        </div>
+                    </form>
+                </div>
       </div>
     </div>
+</div>
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -168,7 +175,7 @@
     </div>
     <div>
       <div class="container">
-      Julian J Alburquerque <a class="teal-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Julian J Alburquerque <a class="teal-text text-lighten-3" href="http://materializecss.com">Web developer</a>
       </div>
     </div>
   </footer>
@@ -176,5 +183,25 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script>
+      function submitForm(){
+          console.log("Submit form is running");
+        //some validation code here
+          var form = $("#yooo");
+          $("#feedback").removeClass("hidden");
+          $("#submitbtn").addClass("hidden");
+          
+          $.ajax({
+              type: "post",
+              url: form.attr("action"),
+              data: form.serialize(),
+              success: function(a, b, c){
+                    console.log(a+" "+b);
+                  $("#feedback").html("Your message has been sent!");
+              }
+              
+          });
+      }
+</script>
   </body>
 </html>
